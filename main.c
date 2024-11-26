@@ -6,7 +6,7 @@
 /*   By: gpicchio <gpicchio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 11:31:47 by gpicchio          #+#    #+#             */
-/*   Updated: 2024/11/25 17:03:14 by gpicchio         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:22:21 by gpicchio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int main()
 {
-	ft_printf("|%10d|\n", 42);
+	char c = 'a';
+	ft_printf("|%+c|\n", c);
+	printf("|%+c|\n", c);
 	return (0);
 }

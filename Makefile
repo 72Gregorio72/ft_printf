@@ -3,7 +3,7 @@ SRCS = srcs/ft_printf.c srcs/parsing.c
 CC = cc -Wall -Wextra -Werror -g
 OBJS = $(SRCS:.c=.o)
 INCLUDE = includes
-BONUSSRCS = bonus/ft_printf_bonus.c bonus/parsing_bonus.c bonus/manage_minus_bonus.c
+BONUSSRCS = bonus/ft_printf_bonus.c bonus/parsing_bonus.c bonus/ft_printf_utils_bonus.c
 BONUSOBJS = $(BONUSSRCS:.c=.o)
 
 all: $(NAME)
@@ -35,7 +35,9 @@ bonus: $(BONUSOBJS)
 	$(CC) -I${INCLUDE} -c $(BONUSSRCS)
 	ar -rcs $(NAME) $(BONUSOBJS) libft/libft.a
 	echo "${BOLD}${GREEN}Bonus compilation successful${NO_COLOR}"
-
+bclean: clean
+	rm -f $(BONUSOBJS)
+	echo "${BOLD}${YELLOW}Bonus cleaned${NO_COLOR}"
 .PHONY: all clean fclean re bonus
 .SILENT:
 RED = \033[1;31m
